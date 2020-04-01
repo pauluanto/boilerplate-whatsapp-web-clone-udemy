@@ -1,12 +1,8 @@
-import * as React from 'react';
-import Hello from './Hello';
-import Info from './Info';
+import React from 'react';
 
 const App = () => (
   <div>
     <h1>Welcome to Meteor!</h1>
-    <Hello />
-    <Info />
   </div>
 );
 
