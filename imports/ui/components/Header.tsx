@@ -17,6 +17,7 @@ const Header = (props:any):JSX.Element => {
 
     return (
         <StyledHeader>
+            {props.children}
             <div className={props.iconsWidthSmall ? 'icons-left small' : 'icons--left'}>
                 {renderIcons()}
             </div>
