@@ -99,14 +99,27 @@ export const dummyUsers:User[] =
 ]
 
 Meteor.methods({
-    'user.login':function({username, phone, profile}){
+    'user.login':function({username, phone, password}){
         let userExist:boolean;
         const user:User = Accounts.findUserByUsername(username);
         userExist = !!user;
         if (userExist){
             console.log('User exist', user);
+            // logger l'utilisateur
+            return true;
         }else{
             console.log('user not exist');
+            //creer l utilisateur
+            return Accounts.createUser({
+                username,
+                password,
+                profile: {
+                    phone,
+                    actu:'Salut, j\'utilise whatapp',
+                    picture: 'https://t3.ftcdn.net/jpg/01/09/00/64/240_F_109006426_388PagqielgjFTAMgW59jRaDmPJvSBUL.jpg'
+
+                }
+            });
         }
     }
 })
