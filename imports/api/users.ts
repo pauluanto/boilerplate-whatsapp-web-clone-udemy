@@ -1,3 +1,5 @@
+import { Meteor } from 'meteor/meteor';
+import { Accounts } from 'meteor/accounts-base';
 import { User } from './models';
 
 export const dummyUsers:User[] =
@@ -95,3 +97,16 @@ export const dummyUsers:User[] =
     }
 }
 ]
+
+Meteor.methods({
+    'user.login': function ({username, phone, profile}) {
+        let userExist:boolean;
+        const user:User = Accounts.findUserByUsername(username);
+        userExist = !!user;
+        if(userExist){
+            console.log('Userr Exist', user);
+        }else{
+            console.log('User don t exist');
+        }
+    }
+})
