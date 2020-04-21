@@ -1,7 +1,6 @@
 import React from 'react';
 import StyledFormLogin from '../elements/StyledFormLogin';
 
-
 const FormLogin = (props:any):JSX.Element => {
     const [state, setState] = React.useState<any>({
         username: '',
@@ -21,8 +20,6 @@ const FormLogin = (props:any):JSX.Element => {
             ));
     }
     console.log(state);
-
-
     return (
 
         <StyledFormLogin>
@@ -30,7 +27,7 @@ const FormLogin = (props:any):JSX.Element => {
                 <input
                     className="input"
                     name="username"
-                    placeholder="Nom d'Utilisateur"
+                    placeholder="Nom d'utilisateur"
                     value={username}
                 onChange={handleChange}
                 />

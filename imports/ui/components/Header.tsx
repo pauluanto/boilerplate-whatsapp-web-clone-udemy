@@ -1,6 +1,6 @@
 import React from 'react';
 import StyledHeader from '../elements/StyledHeader';
-import FontAwesome from 'React-fontawesome';
+import FontAwesome from 'react-fontawesome';
 
 const Header = (props:any):JSX.Element => {
     const {icons, iconClass} = props;
