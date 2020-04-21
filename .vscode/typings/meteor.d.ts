@@ -36,7 +36,7 @@ declare module Accounts {
   function onPageLoadLogin(func: Function): void;
 }
 
-declare module "meteor/accounts-base" {
+declare module 'meteor/accounts-base' {
   /// <reference path="meteor.d.ts" />
 
   module Accounts {
@@ -105,7 +105,7 @@ declare module Accounts {
   };
 }
 
-declare module "meteor/accounts-base" {
+declare module 'meteor/accounts-base' {
   module Accounts {
     function changePassword(oldPassword: string, newPassword: string, callback ? : Function): void;
 
@@ -202,7 +202,7 @@ declare module Accounts {
   }
 }
 
-declare module "meteor/accounts-base" {
+declare module 'meteor/accounts-base' {
   /// <reference path="meteor.d.ts" />
   /// <reference path="meteor_main.d.ts" />
 
@@ -377,7 +377,7 @@ declare module Blaze {
   function toHTMLWithData(templateOrView: Template | View, data: Object | Function): string;
 }
 
-declare module "meteor/blaze" {
+declare module 'meteor/blaze' {
   /// <reference path="meteor.d.ts" />
 
   module Blaze {
@@ -519,7 +519,7 @@ declare module BrowserPolicy {
   }
 }
 
-declare module "meteor/browser-policy" {
+declare module 'meteor/browser-policy' {
   module BrowserPolicy {
     interface framing {
       disallow(): void;
@@ -572,7 +572,7 @@ declare module Match {
 
 declare function check(value: any, pattern: any): void;
 
-declare module "meteor/check" {
+declare module 'meteor/check' {
   module Match {
     var Any: any;
     var String: any;
@@ -637,7 +637,7 @@ declare module DDPCommon {
   }
 }
 
-declare module "meteor/ddp" {
+declare module 'meteor/ddp' {
   /// <reference path="meteor.d.ts" />
 
   module DDP {
@@ -720,7 +720,7 @@ declare module EJSON {
   function toJSONValue(val: EJSON): JSONable;
 }
 
-declare module "meteor/ejson" {
+declare module 'meteor/ejson' {
   interface EJSONableCustomType {
     clone(): EJSONableCustomType;
     equals(other: Object): boolean;
@@ -794,7 +794,7 @@ interface MailComposer {
   pipe(stream: any /** fs.WriteStream **/ ): void;
 }
 
-declare module "meteor/email" {
+declare module 'meteor/email' {
   module Email {
     function send(options: {
       from ? : string;
@@ -879,7 +879,7 @@ declare module HTTP {
   }, asyncCallback ? : Function): HTTP.HTTPResponse;
 }
 
-declare module "meteor/http" {
+declare module 'meteor/http' {
   module HTTP {
     interface HTTPRequest {
       content ? : string;
@@ -1021,7 +1021,7 @@ declare module Meteor {
   /** Pub/Sub **/
 }
 
-declare module "meteor/meteor" {
+declare module 'meteor/meteor' {
   /// <reference path="mongo.d.ts" />
   /// <reference path="ejson.d.ts" />
 
@@ -1197,7 +1197,7 @@ declare module Meteor {
   /** Pub/Sub **/
 }
 
-declare module "meteor/meteor" {
+declare module 'meteor/meteor' {
   /// <reference path="meteor.d.ts" />
 
   module Meteor {
@@ -1308,7 +1308,7 @@ interface Subscription {
   userId: string;
 }
 
-declare module "meteor/meteor" {
+declare module 'meteor/meteor' {
   module Meteor {
     /** Connection **/
     interface Connection {
@@ -1440,7 +1440,7 @@ declare module Mongo {
   interface ObjectID {}
 }
 
-declare module "meteor/mongo" {
+declare module 'meteor/mongo' {
   module Mongo {
     interface Selector {
       [key: string]: any;
@@ -1554,7 +1554,7 @@ declare module Mongo {
   }
 }
 
-declare module "meteor/mongo" {
+declare module 'meteor/mongo' {
   module Mongo {
     interface AllowDenyOptions {
       insert ? : (userId: string, doc: any) => boolean;
@@ -1579,7 +1579,7 @@ declare module Random {
   function choice(str: string): string;
 }
 
-declare module "meteor/random" {
+declare module 'meteor/random' {
   module Random {
     function id(numberOfChars ? : number): string;
 
@@ -1603,7 +1603,7 @@ interface ReactiveVar < T > {
   set(newValue: T): void;
 }
 
-declare module "meteor/reactive-var" {
+declare module 'meteor/reactive-var' {
   var ReactiveVar: ReactiveVarStatic;
   interface ReactiveVarStatic {
     new < T > (initialValue: T, equalsFunc ? : Function): ReactiveVar < T > ;
@@ -1624,7 +1624,7 @@ declare module Session {
   function setDefault(key: string, value: EJSONable | any): void;
 }
 
-declare module "meteor/session" {
+declare module 'meteor/session' {
   /// <reference path="ejson.d.ts" />
 
   module Session {
@@ -1645,7 +1645,7 @@ interface TemplateStatic extends Blaze.TemplateStatic {
   [index: string]: any | Blaze.Template;
 }
 
-declare module "meteor/templating" {
+declare module 'meteor/templating' {
   /// <reference path="blaze.d.ts" />
 
   var Template: TemplateStatic;
@@ -1692,7 +1692,7 @@ declare module Tinytest {
   function addAsync(description: string, func: (test: ITinytestAssertions) => void): void;
 }
 
-declare module "meteor/tiny-test" {
+declare module 'meteor/tiny-test' {
   interface ILengthAble {
     length: number;
   }
@@ -1831,7 +1831,7 @@ interface PackageAPI {
 
 declare var console: Console;
 
-declare module "meteor/tools" {
+declare module 'meteor/tools' {
   module App {
     function accessRule(pattern: string, options ? : {
       type ? : string;
@@ -1972,7 +1972,7 @@ declare module Tracker {
   function onInvalidate(callback: Function): void;
 }
 
-declare module "meteor/tracker" {
+declare module 'meteor/tracker' {
   module Tracker {
     function Computation(): void;
     interface Computation {

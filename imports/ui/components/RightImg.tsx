@@ -1,7 +1,7 @@
 import React from 'react';
 
 import StyledRightImg from '../elements/StyleRightImh';
-//TEST
+
 const RightImg = (props:any):JSX.Element => {
     return (
         <StyledRightImg right={props.right}>
@@ -19,6 +19,7 @@ const RightImg = (props:any):JSX.Element => {
                 </p>
                 <div className="rightImg--divider" />
             </div>
+            {props.children}
         </StyledRightImg>
     )
 }
